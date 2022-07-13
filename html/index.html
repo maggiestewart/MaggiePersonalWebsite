@@ -5,9 +5,10 @@
     <meta content="width=device-width, initial-scale=1">
     <title>Maggie Stewart</title>
     <link rel="stylesheet" type="text/css" href="/css/homepage.css">
-
 </head>
-<body id="header" style="margin: 0; background: #171717; font-family:'Georgia'; color: white; overflow-x: hidden; ">
+
+<body id="header" style="margin: 0; background: #171717; font-family:'Georgia'; color: white; overflow-x: hidden;">
+
         <div class = "topnav">
             <a href="#header"> Home </a>
             <a href="#about"> About Me </a>
@@ -120,35 +121,63 @@
                 <button class="btn" onclick="filterSelection('photo')"> Photography </button>
             </div>
 
-            <div class="row" style="color: black;display: flex; flex-wrap: wrap">
-
+            <div class="row" style="color: black;display: flex; flex-wrap: wrap; text-align: center">
+                <!-- Computer Science -->
                 <div class="column cs">
-                    <div class="content">
-                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="Library App" style="width:100%">
+                    <div class="content" onclick=window.open('https://www.youtube.com/watch?v=6JS7RYJbMXU&ab_channel=MaggieStewart')>
+                        <img src="/ProjectSectionImg/littleLibraryLocatorImg.jpg" alt="Library App" style="width:100%">
                         <h4>Little Library Locator</h4>
-                        <p>2017 - Congressional App Challenge</p>
+                        <p>Congressional App Challenge Entry - 2017 <br>
+                        <li style="text-align: left; margin-left: 20px;">Created an app using MIT App Inventor 2 to locate Little Free Libraries around specific zipcodes</li>
+                        <li style="text-align: left; margin-left: 20px;">Awarded 3rd place in Louisiana's 6th District under Congressman Garret Graves and 1st place in my
+                            Computer Science class </li> <br>
+                        <a href="https://garretgraves.house.gov/media-center/press-releases/graves-announces-2017-congressional-app-challenge-winner">News Article</a>
+                            | <a href="https://www.youtube.com/watch?v=6JS7RYJbMXU&ab_channel=MaggieStewart">Video Submission/Demo</a>
+                        </p>
                     </div>
                 </div>
                 <div class="column cs">
-                    <div class="content">
-                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="Schedule Booklet" style="width:100%">
+                    <div class="content" onclick=window.open('https://austinfranklin12.bandcamp.com/album/not-another-covid-album')>
+                        <img src="/ProjectSectionImg/musicAlbumCover.jpg" alt="Music" style="width:100%">
+                        <h4>Slow Roasted</h4>
+                        <p>MUS 2745 class @ LSU - Fall 2021 <br>
+                        <li style="text-align: left; margin-left: 20px;">Composed a 2-3 minute original piece using Studio One, Midi/Mixdown/Automation,
+                        and Musique Concrete techniques</li><br>
+                        <a href="https://austinfranklin12.bandcamp.com/album/not-another-covid-album">Listen Here</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column cs">
+                    <div class="content" onclick=window.open('https://github.com/maggiestewart/LSUScheduleBookletProject')>
+                        <img src="/ProjectSectionImg/LSUScheduleBookletImg.jpg" alt="Schedule Booklet" style="width:100%">
                         <h4>LSU Revamped Schedule Booklet</h4>
-                        <p>CSC 3380 class - Spring 2022 </p>
+                        <p>CSC 3380 class @ LSU - Spring 2022 <br> Team Lead: Milestone 1-2 & Project Presentation/Postmortem <br>
+                            <li style="text-align: left; margin-left: 20px;">Created a more aesthetically pleasing user interface to make the course booklet easier to
+                                interpret for incoming and returning students</li>
+                            <li style="text-align: left; margin-left: 20px;">Implemented a scheduling resource page, schedule planner, and advanced search bar for finer
+                                search details like the day, time of day, virtual, etc.</li>
+                            <li style="text-align: left; margin-left: 20px;">Was one of four groups chosen to present to industry personnel and received A+ scores for
+                                project implementation and presentation</li>
+                            <br><a href="https://github.com/maggiestewart/LSUScheduleBookletProject">Github Repo</a>
+                        </p>
                     </div>
                 </div>
                 <div class="column cs">
                     <div class="content" onclick=window.open('https://github.com/maggiestewart/LeetCodePractice')>
-                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="LeetCode" style="width:100%">
+                        <img src="/ProjectSectionImg/workInProgress.jpg" alt="LeetCode" style="width:100%">
                         <h4>Python & Java LeetCode Challenges</h4>
-                        <p>Lorem ipsum dolor..</p>
+                        <p><li style="text-align: left; margin-left: 20px;">Completing challenges to prepare for interviews and improve my coding skills in Java and Python</li>
+                        <br> <a href="https://github.com/maggiestewart/LeetCodePractice">(Currently in progress)</a></p>
                     </div>
                 </div>
 
                 <div class="column cs">
-                    <div class="content" onclick=window.open('https://github.com/maggiestewart/LeetCodePractice')>
-                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="ResHall App" style="width:100%">
+                    <div class="content" onclick=window.open('https://github.com/maggiestewart')>
+                        <img src="/ProjectSectionImg/workInProgress.jpg" alt="ResHall App" style="width:100%">
                         <h4>CSC 4330 App</h4>
-                        <p>CSC 4330 class - Fall 2022 (Currently in progress) </p>
+                        <p>CSC 4330 class @ LSU - Fall 2022 <br>
+                            <br>(Currently in progress) </p>
+
                     </div>
                 </div>
 <!--                 PHOTOGRAPHY-->
@@ -225,14 +254,10 @@
                 </form>
             </div>
         </section>
-
     </nav>
 
     <div class="space" style="height: 20px"></div>
-
-    <div class="footer">
-                <h4 style="padding-top: 8px; margin-left: 20px;">© 2022 Margaret Stewart. All rights reserved.</h4>
-    </div>
+    <div class="footer"><h4 style="padding-top: 8px; margin-left: 20px;">© 2022 Margaret Stewart. All rights reserved.</h4></div>
 
 <script>
     filterSelection("all")
@@ -275,6 +300,9 @@
             this.className += " active";
         });
     }
+
+    /* DISABLE RIGHT CLICK ON WEBPAGE */
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
     /* ACCORDION */
     var acc = document.getElementsByClassName("accordion");
