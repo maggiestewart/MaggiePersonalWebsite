@@ -5,44 +5,39 @@
     <meta content="width=device-width, initial-scale=1">
     <title>Maggie Stewart</title>
     <link rel="stylesheet" type="text/css" href="/css/homepage.css">
-    <link rel="icon" type="image/x-icon" href="/PhotoIcons/favicon.ico">
-    <script src="/js/newsPage.js"></script>
 
 </head>
-<body id="header" style="margin: 0; background: #171717; font-family:'Georgia';">
-    <nav>
-        <div class = "topnav" >
+<body id="header" style="margin: 0; background: #171717; font-family:'Georgia'; color: white; overflow-x: hidden; ">
+        <div class = "topnav">
             <a href="#header"> Home </a>
             <a href="#about"> About Me </a>
             <a href="#news"> News </a>
             <a href="#projects"> Projects </a>
-            <a href="#contact"> Contact Me </a>
-        </div>
-
-        <div class = "header" style="background-image: url('/PhotoIcons/img1.JPG'); background-size: 100%; width: 100%; height: 650px; padding-top: 40px">
-            <div class="hero-text" style="padding-bottom: 320px">
-                <h1 style="color: white; text-align: center; text-shadow: 2px 2px black; font-size: 45px;"> Maggie Stewart </h1>
-
-                <ul id="iconContent">
-                    <img src="/PhotoIcons/GitHubIcon.png" onclick="parent.open('https://github.com/maggiestewart')">
-                    <img src="/PhotoIcons/LinkedInIcon.png" onclick="parent.open('https://www.linkedin.com/in/maggiestewart225/')">
-                    <img src="/PhotoIcons/TwitterIcon.png" onclick="parent.open('https://twitter.com/MaggieS225')">
-                    <img src="/PhotoIcons/EmailIcon.png" onclick="parent.open('mailto:margaretmaggiestewart225@gmail.com')">
-                </ul>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="#contact">Contact Me</a></button>
+                <div class="dropdown-content">
+                    <a href="https://github.com/maggiestewart">Github</a>
+                    <a href="https://www.linkedin.com/in/maggiestewart225/">LinkedIn</a>
+                    <a href="https://twitter.com/MaggieS225">Twitter</a>
+                    <a href="mailto:margaretmaggiestewart225@gmail.com">Email</a>
+                </div>
             </div>
         </div>
 
+        <div class = "header" style="background-image: url('/PhotoIcons/BannerPhoto.png'); background-size: 100%; width: 100%; height: 680px; padding-top: 40px">        </div>
+        <nav>
         <section class = "about">
-            <h2 id="about" style="text-align: center; font-size: 30px; color: white; padding-top: 120px"> Welcome to my personal website! </h2>
-            <img src="/PhotoIcons/ProfilePhoto.JPG" style="height: 30%; width: 40%; margin-left: 30px; padding-top: 90px; float: left">
-            <div class="boxed">
-                <p class = "introText" style="font-size: 20px; margin-left: 25px; color: white; margin-right: 40px; display: flex; flex-direction: column">
+            <h2 id="about" style="text-align: center; font-size: 30px; padding-top: 120px"> Welcome to my personal website! </h2>
+            <div id="grid-container">
+            <img src="/PhotoIcons/ProfilePhoto.JPG" style="height: 30%; width: 40%; margin-left: 30px; margin-top: 70px; float: left; border-radius: 30px; border-top-left-radius: 30px; border-top-right-radius: 30px">
+                <p id = "introText">
                     👋 Hi! I'm Maggie Stewart (she/her), a third year undergraduate Computer Science student with a
                     Second Discipline Concentration in Mathematics at Louisiana State University (LSU) in the Ogden Honors College.
                     <br><br>
                     Currently, I'm a Software Engineering Intern at Crimer in Baton Rouge, LA where I'm working on mobile app development using
                     Android Studio and React Native. In my free time, I am relearning Python to develop my interests in data analytics/visualization,
-                    updating my class project Revamped LSU Schedule Booklet on Github, and maintaining my personal website.
+                    working through LeetCode challenges to improve my coding skills with Java/Python, updating my class project Revamped LSU Schedule
+                    Booklet on Github, and maintaining my personal website.
                     <br><br>
                     When I'm not coding on my own or working at Crimer, I also work as a Library Page at the Bluebonnet Library.
                     As an avid reader who grew up in the EBR Parish Library system, the Library holds a special place in my heart. Otherwise, you can find
@@ -54,14 +49,14 @@
             </div>
         </section>
 
-        <div class="space" style="height: 500px"></div>
+        <div class="space" style="height: 300px"></div>
 
-        <section class = "news" style="height: auto; color: white; margin-left: 20px; padding-top: 120px">
-            <h2 id = "news" style="font-size: 30px; text-align: center; color: white; padding-top: 125px;"> News </h2>
-
+        <section class = "news" style="height: auto; margin-left: 20px; padding-top: 120px">
+            <h2 id = "news" style="font-size: 30px; text-align: center; padding-top: 125px;"> News </h2>
+        <nav>
             <label for="touch"><span class="accordion">2020</span></label>
             <input id="touch" type="checkbox">
-            <div class="panel">
+            <ul class="slide">
                 <h3>January 2020</h3>
                 <ul><li>National Center for Women & Information Technology (NCWIT) Louisiana Regional Affiliate Winner 2020</li></ul>
 
@@ -71,10 +66,11 @@
                 <h3>December 2020</h3>
                 <ul><li><a href="https://www.lsu.edu/commencement/lists/presidents-honor-roll/2020-12.php#EastBatonRouge">
                     LSU President's Honor Roll</a></li></ul>
-            </div>
+            </ul>
 
-            <span class="accordion">2021</span>
-            <div class="panel">
+            <label for="touch1"><span class="accordion">2021</span></label>
+            <input id="touch1" type="checkbox">
+            <ul class="slide">
                 <h3>March 2021</h3>
                 <ul><li>Awarded <a href="https://www.lsu.edu/family/association/2021-22_scholarshiprecipients/2021-2022scholarshiprecipients.php">
                     LSU Family Association Scholarship</a></li></ul>
@@ -89,10 +85,11 @@
 
                 <h3>December 2021</h3>
                 <ul><li><a href="https://www.lsu.edu/commencement/lists/deans-list/2021-12.php#EastBatonRouge">LSU Dean's List</a></li></ul>
-            </div>
+            </ul>
 
-            <span class="accordion">2022</span>
-            <div class="panel">
+            <label for="touch2"><span class="accordion">2021</span></label>
+            <input id="touch2" type="checkbox">
+            <ul class="slide">
                 <h3>March 2022</h3>
                 <ul><li>Attended <a href="https://www.lsu.edu/academicaffairs/codingacareer/codingacareer.php">
                     Coding a Career</a> hosted by Apple & ACT | The App Association</li></ul>
@@ -108,80 +105,195 @@
                 <h3>June 2022</h3>
                 <ul><li>Attended <a href="https://superposition.tech/hackathon6.html">Superposition VI Hackathon</a></li>
                     <li>Attended <a href="https://cvpr2022.thecvf.com/">IEEE's CVPR '22 Conference</a> Virtually</li></ul>
+            </ul>
+        </nav>
+        </section>
+
+        <section class = "projects" style="margin-left: 20px; margin-right: 20px">
+            <h3 id="projects" style="text-align: center; font-size: 30px; padding-top: 85px;"> Projects </h3>
+            <h4 style="margin-left: 35px; margin-right: 20px; font-size: 16px; text-align: center"> Over the quarantine period at the beginning of the pandemic in 2020, I picked up many new hobbies, one of which is photography.
+                Although photography isn't necessarily Computer Science related, I wanted to include a skill that highlighted the importance of
+                having non-technical hobbies. Please enjoy the photos I've taken over the years. </h4>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('cs')"> Computer Science </button>
+                <button class="btn" onclick="filterSelection('photo')"> Photography </button>
+            </div>
+
+            <div class="row" style="color: black;display: flex; flex-wrap: wrap">
+
+                <div class="column cs">
+                    <div class="content">
+                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="Library App" style="width:100%">
+                        <h4>Little Library Locator</h4>
+                        <p>2017 - Congressional App Challenge</p>
+                    </div>
+                </div>
+                <div class="column cs">
+                    <div class="content">
+                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="Schedule Booklet" style="width:100%">
+                        <h4>LSU Revamped Schedule Booklet</h4>
+                        <p>CSC 3380 class - Spring 2022 </p>
+                    </div>
+                </div>
+                <div class="column cs">
+                    <div class="content" onclick=window.open('https://github.com/maggiestewart/LeetCodePractice')>
+                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="LeetCode" style="width:100%">
+                        <h4>Python & Java LeetCode Challenges</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+
+                <div class="column cs">
+                    <div class="content" onclick=window.open('https://github.com/maggiestewart/LeetCodePractice')>
+                        <img src="/PhotoIcons/ProfilePhoto.JPG" alt="ResHall App" style="width:100%">
+                        <h4>CSC 4330 App</h4>
+                        <p>CSC 4330 class - Fall 2022 (Currently in progress) </p>
+                    </div>
+                </div>
+<!--                 PHOTOGRAPHY-->
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/bamboo.jpg" alt="bamboo plant" style="width:100%">
+                    <p>Bamboo Plant - 4/2020</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/yellowDaisy.png" alt="yellow daisy" style="width:100%">
+                    <p>Yellow Daisy - 5/2020</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/pineTree.jpg" alt="pine tree" style="width:100%">
+                    <p>Pine Tree - 7/2020</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/whitePinkFlower.jpg" alt="white-pink flower" style="width:100%">
+                    <p>White pink flower - 11/2020</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/iceStormBR.jpg" alt="snowflake" style="width:100%">
+                    <p>Snowflakes (BR Freeze) - 2/2021</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/diamondHeadHawaii.jpg" alt="diamondhead" style="width:100%">
+                    <p>DiamondHead (Oahu, HI) - 5/2022</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/diamondHeadHawaiiWater.jpg" alt="diamondhead water" style="width:100%">
+                    <p>DiamondHead (Oahu, HI) - 5/2022</p>
+                </div></div>
+
+                <div class="column photo"><div class="content">
+                    <img src="/ProjectSectionImg/templeHawaii.jpg" alt="temple" style="width:100%">
+                    <p>Byodo-in Temple (Oahu, HI) - 5/2022</p>
+                </div></div>
+                <!-- END GRID -->
             </div>
         </section>
 
-<!--        <div class="space" style="height: 50px"></div>-->
+        <div class="space" style="height: 50px"></div>
 
-        <section class = "projects" style="color: white">
-            <h3 id="projects" style="color: white; text-align: center; font-size: 30px; padding-top: 125px;"> Projects </h3>
-        </section>
-
-        <div class="space" style="height: 500px"></div>
-
-        <section class = "contact">
-            <div class="container">
-                <h3 id = "contact" style="color: white; text-align: center; font-size: 30px; padding-top: 100px"> Contact Me </h3>
-                <div class="row">
-                    <div class="column">
-                        <div class="card">
-                            <img src="/PhotoIcons/ProfilePhoto.JPG" alt="Maggie" style="width:100%">
-                            <h1 style="font-size: 22px; color: white">Maggie Stewart</h1>
-                            <p class="title" style="color: white">CS & Math Undergraduate Student <br>
-                            Louisiana State University / Ogden Honors College</p>
-                            <div style="padding-bottom: 20px">
-                                <a href="https://github.com/maggiestewart">Github | </a>
-                                <a href="https://www.linkedin.com/in/maggiestewart225/">LinkedIn | </a>
-                                <a href="https://twitter.com/MaggieS225">Twitter | </a>
-                                <a href="mailto:margaretmaggiestewart225@gmail.com">Email</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column" style="display: flex; flex-direction: column; color: white">
-                        <form action="/mailto:margaretmaggiestewart225@gmail.com">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                            <label for="emailAddr">Email</label>
-                            <input type="text" id="emailAddr" name="email" placeholder="example@gmail.com">
-                            <label for="subject">Message</label>
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                            <input type="submit" value="Submit">
-                        </form>
+        <section class = "contactPage">
+            <h3 id = "contact" style="text-align: center; font-size: 30px; padding-top: 80px"> Contact Me </h3>
+            <div class="grid-container">
+                <div class="card">
+                    <img src="/PhotoIcons/ProfilePhoto.JPG" alt="Maggie" style="width:100%; border-top-left-radius: 10px; border-top-right-radius: 10px">
+                    <h1 style="font-size: 22px;">Maggie Stewart</h1>
+                    <p class="title">CS & Math Undergraduate Student <br>
+                        Louisiana State University | Ogden Honors College</p>
+                    <div style="padding-bottom: 20px">
+                        <a href="https://github.com/maggiestewart" style="color: white">Github | </a>
+                        <a href="https://www.linkedin.com/in/maggiestewart225/" style="color: white">LinkedIn | </a>
+                        <a href="https://twitter.com/MaggieS225" style="color: white">Twitter | </a>
+                        <a href="mailto:margaretmaggiestewart225@gmail.com" style="color: white">Email</a>
                     </div>
                 </div>
+                <form id="contactForm" action="mailto:margaretmaggiestewart225@gmail.com">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="emailAddr">Email</label>
+                    <input type="text" id="emailAddr" name="email" placeholder="example@gmail.com">
+                    <label for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </section>
 
     </nav>
 
-    <div class="space" style="height: 50px"></div>
+    <div class="space" style="height: 20px"></div>
 
     <div class="footer">
-        <div class="navbar">
-                <h4 style="padding-top: 8px; margin-left: 20px; color: white">© 2022 Margaret Stewart. All rights reserved.</h4>
-        </div>
+                <h4 style="padding-top: 8px; margin-left: 20px;">© 2022 Margaret Stewart. All rights reserved.</h4>
     </div>
 
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            removeClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+        }
+    }
+
+    function addClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+        }}}
+
+    function removeClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }}
+        element.className = arr1.join(" ");
+    }
+
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
+    /* ACCORDION */
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            this.nextElementSibling.toggle("hide")
+
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 </body>
 
-<script> var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        this.nextElementSibling.toggle("hide")
-
-        /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-}
-</script>
 </html>

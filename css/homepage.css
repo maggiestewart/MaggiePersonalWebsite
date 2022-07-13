@@ -5,25 +5,13 @@ html {
     scroll-behavior: smooth;
 }
 
-a:link {color: white;}
-a:visited {color: goldenrod;}
-a:hover {color: steelblue;}
-
-/* Place text in the middle of the image */
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
+a:link, a:visited {color: #D0B0B0;}
+a:hover {color: darkgoldenrod;}
 
 .topnav {
-    background-color: steelblue;
-    overflow: hidden;
+    background-color: darkslategrey;
     top: 0;
-    padding: 15px;
+    padding: 40px;
     width: 100%;
     position: sticky;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -32,80 +20,88 @@ a:hover {color: steelblue;}
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: white;
     text-align: center;
-    padding: 16px;
+    padding: 10px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    color: white;
     text-decoration: none;
     font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn { background-color: #ddd; color: black}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D0B0B0;
+    padding: 14px 13px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
     color: black;
-}
-
-#iconContent {
-    align-content: center;
-    padding-left: 40px;
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
+    text-align: left;
 }
 
-#iconContent img{
-    height: 30px;
-    width: 30px;
-    padding: 20px;
-}
-#contactIcons {
-    align-content: center;
-    display: flex;
-    flex-direction: row;
+.dropdown-content a:hover { background-color: #ddd; }
+.dropdown:hover .dropdown-content { display: block; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 60px;
 }
 
-#contactIcons img {
-    height: 30px;
-    width: 30px;
-    padding: 20px
-}
-
-.boxed {
-    /*border: 1px solid green ;*/
-    margin-top: 70px;
-    height: 430px;
-    width: 830px;
-    float: right;
-    margin-left: 20px;
+#introText {
+    margin-top: 85px;
     margin-right: 40px;
+    margin-left: 25px;
+    height: 430px;
+    width: 800px;
+    float: right;
+    font-size: 18px;
 }
 
 .accordion {
     width: 100%;
     overflow: hidden;
-    background-color: steelblue;
-    color: white;
+    background-color: #D0B0B0;
 }
 
-.panel {padding-left: 30px;}
 * {box-sizing: border-box;}
 
 .accordion:after {
     content: '+';
     font-size: 20px;
-    color: white;
     float: right;
     margin-left: 5px;
 }
 
 .active:after {
     content: '-';
-    color: white
 }
 
 span {
     padding: 20px;
-    background: steelblue;
-    color: white;
+    background: #D0B0B0;
     font-size: 1.2em;
     font-variant: small-caps;
     cursor: pointer;
@@ -115,6 +111,79 @@ span {
     border-radius: 5px;
 }
 
+.slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height .8s ease;
+}
+
+.slide li { padding: 10px; }
+
+#touch, #touch1, #touch2 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#touch:checked + .slide, #touch1:checked + .slide, #touch2:checked + .slide { height: auto; }
+
+* { box-sizing: border-box; }
+
+#myBtnContainer {
+    margin-left: 35px;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row { margin: 8px -16px; }
+.row, .row > .column { padding: 8px; }
+
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide columns by default */
+}
+.column cs, .column photo {
+    vertical-align: baseline; display: block; flex-direction: column;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+.show { display: block; }
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn:hover { background-color: #ddd; }
+.btn.active {
+    background-color: #D0B0B0;
+    color: white;
+}
+
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -122,63 +191,45 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    color: black;
+    font-family: inherit;
 }
 
 input[type=submit] {
-    background-color: steelblue;
+    background-color: #D0B0B0;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    background-color: grey;
-}
-
-/* Create two columns that float next to each other */
-.column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding-right: 50px;
-    padding-left: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+input[type=submit]:hover { background-color: darkgoldenrod; }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #2D3033;
-    max-width: 450px;
+    background-color: #D0B0B0;
+    max-width: 500px;
     margin: auto;
     text-align: center;
+    border-radius: 10px;
 }
-
 
 title {
     text-decoration: none;
     font-size: 18px;
-    color: white;
     padding-bottom: 20px;
 }
 
-/* footer */
-.navbar {
-    background-color: steelblue;
-    overflow: hidden;
-    bottom: 0;
-    width: 100%;
+#contactForm {
+    margin-left: 120px;
+    margin-right: 80px;
 }
 
+/* footer */
 .footer {
-    bottom: 0;
     width: 100%;
+    background-color: darkslategrey;
+    overflow: hidden;
     text-align: center;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
