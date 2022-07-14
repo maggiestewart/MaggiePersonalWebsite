@@ -11,20 +11,20 @@ a:hover {color: darkgoldenrod;}
 .topnav {
     background-color: darkslategrey;
     top: 0;
-    padding: 40px;
+    padding: 20px;
     width: 100%;
     position: sticky;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    flex-direction: row;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
     text-align: center;
-    padding: 10px;
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
+    top: 0;
+    padding: 10px;;
     color: white;
     text-decoration: none;
     font-size: 17px;
@@ -33,11 +33,13 @@ a:hover {color: darkgoldenrod;}
 .dropdown {
     float: left;
     overflow: hidden;
+    top: 0;
 }
 
 .dropdown .dropbtn {
-    font-size: 17px;
+    font-size: 16px;
     border: none;
+    outline: none;
     color: white;
     background-color: inherit;
     font-family: inherit;
@@ -49,16 +51,19 @@ a:hover {color: darkgoldenrod;}
     display: none;
     position: absolute;
     background-color: #D0B0B0;
-    padding: 14px 13px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 16px;
+    min-width: 133px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
+    float: left;
     color: black;
+    padding: 10px;
     text-decoration: none;
-    display: flex;
-    text-align: left;
+    display: block;
+    text-align: center;
 }
 
 .dropdown-content a:hover { background-color: #ddd; }
@@ -95,9 +100,7 @@ a:hover {color: darkgoldenrod;}
     margin-left: 5px;
 }
 
-.active:after {
-    content: '-';
-}
+.active:after { content: '-'; }
 
 span {
     padding: 20px;
@@ -119,8 +122,6 @@ span {
     transition: height .8s ease;
 }
 
-.slide li { padding: 10px; }
-
 #touch, #touch1, #touch2 {
     position: absolute;
     opacity: 0;
@@ -131,9 +132,9 @@ span {
 
 * { box-sizing: border-box; }
 
-#myBtnContainer {
-    margin-left: 35px;
-}
+#myBtnContainer { margin-left: 35px; }
+
+.btn, .btn active { border-radius: 15px; }
 
 .main {
     max-width: 1000px;
@@ -163,6 +164,13 @@ h1 {
 .content {
     background-color: white;
     padding: 10px;
+    border-radius: 20px;
+    height: 570px;
+}
+
+.content img {
+    border-radius: 10px;
+    transition: all 1.5s ease;
 }
 
 .show { display: block; }
